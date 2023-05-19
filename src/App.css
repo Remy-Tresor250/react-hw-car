@@ -1,0 +1,111 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  background: url("./assets/car2.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50%;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  height: 90%;
+  padding: 2rem 5%;
+  backdrop-filter: blur(40px);
+  border-radius: 1rem;
+}
+
+form h1 {
+  text-align: center;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  text-shadow: 2px 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 2rem;
+  height: 100%;
+  padding: 3% 2%;
+  overflow-y: scroll;
+}
+
+::-webkit-scrollbar{
+  display: none;
+}
+
+input[type="text"] {
+  padding: 0.8rem 1rem;
+  border: 1px solid #a3a3a3;
+  border-radius: 4px;
+  outline: none;
+}
+
+form .form-container .condition, .transmission{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex-direction: column;
+}
+form .form-container .condition div, .transmission div {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+form .form-container .price-range {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  text-align: center;
+}
+form .form-container .price-range div {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+@media (max-width: 1000px) {
+  form {
+    width: 90%;
+  }
+}
+
+form .form-container .features{
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  text-align: center;
+  justify-content: space-around;
+}
+
+form .form-container .features div input{
+  display: flex;
+}
+
+form .form-container button {
+  width: 100%;
+  padding: 1rem 0;
+  font-size: larger;
+  font-weight: 700;
+  background-color: #1653a1;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
